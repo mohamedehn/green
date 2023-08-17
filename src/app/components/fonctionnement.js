@@ -30,7 +30,7 @@ export default function Fonctionnement() {
     <div className="bg-greyforbg py-24 max-w-6xl mx-auto flex">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-4xl font-semibold leading-7 text-green-700">Comment ça fonctionne ?</h2>
+          <h2 className="text-3xl font-semibold leading-7 text-green-700">Comment ça fonctionne ?</h2>
           <p className="mt-2 text-xl font-bold tracking-tight text-gray-900 sm:text-2xl pt-4">
             3 étapes suffisent pour vous permettre d&apos;accomplir votre projet !
           </p>

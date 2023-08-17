@@ -7,6 +7,8 @@ import Fonctionnement from './components/fonctionnement';
 import Devis from './components/devis';
 import Engagements from './components/engagements';
 import Informations from './components/informations';
+import Avis from './components/avis';
+import Footer from './components/footer';
 
 export default function Home() {
   return (
@@ -16,7 +18,9 @@ export default function Home() {
       <Fonctionnement/>
       <Devis/>
       <Engagements/>
+      <Avis/>
       <Informations/>
+      <Footer/>
     </>
   )
 }
