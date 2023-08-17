@@ -1,27 +1,33 @@
+import React from "react";
+import Image from "next/image";
+import ges from "../../assets/ges.png"
+
+
 const navigation = {
     solutions: [
-      { name: 'Marketing', href: '#' },
-      { name: 'Analytics', href: '#' },
-      { name: 'Commerce', href: '#' },
-      { name: 'Insights', href: '#' },
+      { name: 'Borne de recharge', href: '#' },
+      { name: 'Chauffage & Climatisation', href: '#' },
+      { name: 'Isolation', href: '#' },
+      { name: 'Panneaux photovoltaïques', href: '#' },
+      { name: "Rénovation énergétique", href: '#' },
     ],
     support: [
-      { name: 'Pricing', href: '#' },
-      { name: 'Documentation', href: '#' },
-      { name: 'Guides', href: '#' },
-      { name: 'API Status', href: '#' },
+      { name: 'TVA à 5,5%', href: '#' },
+      { name: "MaPrimeRénov'", href: '#' },
+      { name: 'CEE', href: '#' },
+      { name: "L'Eco PTZ", href: '#' },
+      { name: "L'ANHA", href: '#' },
+      { name: "Action Logement", href: '#' },
     ],
     company: [
-      { name: 'About', href: '#' },
+      { name: 'A propos', href: '#' },
       { name: 'Blog', href: '#' },
       { name: 'Jobs', href: '#' },
-      { name: 'Press', href: '#' },
-      { name: 'Partners', href: '#' },
+      { name: 'Partenaires', href: '#' },
     ],
     legal: [
-      { name: 'Claim', href: '#' },
-      { name: 'Privacy', href: '#' },
-      { name: 'Terms', href: '#' },
+      { name: 'Cookies', href: '#' },
+      { name: 'Mentions légales', href: '#' },
     ],
     social: [
       {
@@ -94,16 +100,16 @@ const navigation = {
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
-        <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+        <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-20">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-8">
-              <img
-                className="h-7"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              <Image
+                className="w-full sm:w-[50%]"
+                src={ges}
                 alt="Company name"
               />
               <p className="text-sm leading-6 text-gray-600">
-                Making the world a better place through constructing elegant hierarchies.
+                Making the world a better place.
               </p>
               <div className="flex space-x-6">
                 {navigation.social.map((item) => (
@@ -117,7 +123,7 @@ const navigation = {
             <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="text-sm font-semibold leading-6 text-gray-900">Solutions</h3>
+                  <h3 className="text-sm font-semibold leading-6 text-gray-900">Notre offre</h3>
                   <ul role="list" className="mt-6 space-y-4">
                     {navigation.solutions.map((item) => (
                       <li key={item.name}>
@@ -129,7 +135,7 @@ const navigation = {
                   </ul>
                 </div>
                 <div className="mt-10 md:mt-0">
-                  <h3 className="text-sm font-semibold leading-6 text-gray-900">Support</h3>
+                  <h3 className="text-sm font-semibold leading-6 text-gray-900">Aides de l&apos;état</h3>
                   <ul role="list" className="mt-6 space-y-4">
                     {navigation.support.map((item) => (
                       <li key={item.name}>
@@ -143,7 +149,7 @@ const navigation = {
               </div>
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="text-sm font-semibold leading-6 text-gray-900">Company</h3>
+                  <h3 className="text-sm font-semibold leading-6 text-gray-900">GES</h3>
                   <ul role="list" className="mt-6 space-y-4">
                     {navigation.company.map((item) => (
                       <li key={item.name}>
@@ -155,7 +161,7 @@ const navigation = {
                   </ul>
                 </div>
                 <div className="mt-10 md:mt-0">
-                  <h3 className="text-sm font-semibold leading-6 text-gray-900">Legal</h3>
+                  <h3 className="text-sm font-semibold leading-6 text-gray-900">Mentions légales</h3>
                   <ul role="list" className="mt-6 space-y-4">
                     {navigation.legal.map((item) => (
                       <li key={item.name}>
@@ -169,8 +175,8 @@ const navigation = {
               </div>
             </div>
           </div>
-          <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-            <p className="text-xs leading-5 text-gray-500">&copy; 2020 Your Company, Inc. All rights reserved.</p>
+          <div className="mt-12 border-t border-gray-900/10 pt-8 sm:mt-14 lg:mt-16">
+            <p className="text-xs leading-5 text-gray-500">&copy; 2023 Green Energy Solutions - Tous droits réservés.</p>
           </div>
         </div>
       </footer>
