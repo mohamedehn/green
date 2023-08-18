@@ -5,9 +5,10 @@ import {ArrowPathIcon, Bars3Icon, BoltIcon, CursorArrowRaysIcon, HomeIcon, SunIc
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
 import ges from "../../assets/ges.png"
+import Link from 'next/link';
 
 const products = [
-  { name: 'Borne de recharge', description: " Une offre clé en main, adaptée à chaque besoin.", href: '#', icon: BoltIcon },
+  { name: 'Borne de recharge', description: " Une offre clé en main, adaptée à chaque besoin.", href: '/borne', icon: BoltIcon },
   { name: 'Chauffage & Climatisation', description: 'Parcourez nos différentes solutions personnalisées.', href: '#', icon: Bars3Icon },
   { name: 'Isolation', description: 'Limitez les déperditions énergétiques de votre logement.', href: '#', icon: HomeIcon },
   { name: 'Panneaux photovoltaïques', description: "Grâce à l'auto-consommation,réduisez votre facture d'énergie", href: '#', icon: SunIcon },
@@ -76,10 +77,10 @@ export default function Header() {
                         <item.icon className="h-6 w-6 text-gray-600 group-hover:text-green-800" aria-hidden="true" />
                       </div>
                       <div className="flex-auto">
-                        <a href={item.href} className="block font-semibold text-gray-900">
+                        <Link href={item.href} className="block font-semibold text-gray-900">
                           {item.name}
                           <span className="absolute inset-0" />
-                        </a>
+                        </Link>
                         <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
