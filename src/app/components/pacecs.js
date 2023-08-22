@@ -32,7 +32,7 @@ export default function PacEcs() {
           <Image
             src={clim}
             alt="Product screenshot"
-            className="w-full h-full max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"
+            className="w-full h-full max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0 object-cover"
           />
         </div>
       </div>
