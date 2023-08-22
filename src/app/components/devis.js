@@ -19,7 +19,7 @@ export default function Devis() {
           <div className="lg:ml-auto lg:pl-4 lg:pt-4">
             <div className="lg:max-w-lg">
               <p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Demandez un devis gratuit & sans engagement!</p>
-              <p className="mt-6 text-lg leading-8 text-gray-600 text-justify">
+              <p className="mt-6 text-base leading-8 text-gray-600 text-justify">
                 Un devis personnalisé pour votre projet vous attend. Alors n&apos;hésitez pas à nous contacter en cliquant sur le lien ci-dessous.
                 Un conseiller prendra contact avec vous pour étudier votre projet.
               </p>

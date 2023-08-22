@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const products = [
   { name: 'Borne de recharge', description: " Une offre clé en main, adaptée à chaque besoin.", href: '/borne', icon: BoltIcon },
-  { name: 'Chauffage & Climatisation', description: 'Parcourez nos différentes solutions personnalisées.', href: '#', icon: Bars3Icon },
+  { name: 'Chauffage & Climatisation', description: 'Parcourez nos différentes solutions personnalisées.', href: '/pac', icon: Bars3Icon },
   { name: 'Isolation', description: 'Limitez les déperditions énergétiques de votre logement.', href: '#', icon: HomeIcon },
   { name: 'Panneaux photovoltaïques', description: "Grâce à l'auto-consommation,réduisez votre facture d'énergie", href: '#', icon: SunIcon },
   { name: 'Rénovation électrique', description: 'Mettez aux normes votre logement pour + de sécurité et de confort.', href: '#', icon: ArrowPathIcon },
@@ -47,9 +47,9 @@ export default function Header() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-          <a href="#" className="text-base font-semibold leading-6 text-gray-900">
+          <Link href="/" className="text-base font-semibold leading-6 text-gray-900">
             Accueil
-          </a>
+          </Link>
 
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-base font-semibold leading-6 text-gray-900">
