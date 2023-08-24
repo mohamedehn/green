@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import ges from "../../assets/ges.png"
+import Link from "next/link";
 
 
 const navigation = {
@@ -12,22 +13,22 @@ const navigation = {
       // { name: "Rénovation énergétique", href: '#' },
     ],
     support: [
-      { name: 'TVA à 5,5%', href: '#' },
-      { name: "MaPrimeRénov'", href: '#' },
-      { name: 'CEE', href: '#' },
-      { name: "L'Eco PTZ", href: '#' },
-      { name: "L'ANHA", href: '#' },
-      { name: "Action Logement", href: '#' },
+      { name: 'TVA à 5,5%', href: 'https://www.economie.gouv.fr/particuliers/tva-taux-reduits-travaux#' },
+      { name: "MaPrimeRénov'", href: 'https://france-renov.gouv.fr/aides' },
+      { name: 'CEE', href: 'https://france-renov.gouv.fr/aides/cee' },
+      { name: "L'Eco PTZ", href: 'https://www.service-public.fr/particuliers/vosdroits/F19905' },
+      { name: "L'ANHA", href: 'https://www.anah.fr/' },
+      { name: "Action Logement", href: 'https://www.actionlogement.fr/' },
     ],
     company: [
-      { name: 'A propos', href: '#' },
-      { name: 'Blog', href: '#' },
-      { name: 'Jobs', href: '#' },
-      { name: 'Partenaires', href: '#' },
+      { name: 'A propos', href: '/propos' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Jobs', href: '/jobs' },
+      { name: 'Partenaires', href: '/partenaires' },
     ],
     legal: [
-      { name: 'Cookies', href: '#' },
-      { name: 'Mentions légales', href: '#' },
+      { name: 'Cookies', href: '/cookies' },
+      { name: 'Mentions légales', href: '/mentions' },
     ],
     social: [
       {
@@ -118,9 +119,9 @@ const navigation = {
                   <ul role="list" className="mt-6 space-y-4">
                     {navigation.company.map((item) => (
                       <li key={item.name}>
-                        <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                        <Link href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                           {item.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -130,9 +131,9 @@ const navigation = {
                   <ul role="list" className="mt-6 space-y-4">
                     {navigation.legal.map((item) => (
                       <li key={item.name}>
-                        <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                        <Link href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                           {item.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>

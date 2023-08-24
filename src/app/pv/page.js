@@ -1,6 +1,5 @@
 'use client'
 
-import { Engagement } from "next/font/google"
 import Devis from "../components/devis"
 import Fonctionnement from "../components/fonctionnement"
 import Footer from "../components/footer"
