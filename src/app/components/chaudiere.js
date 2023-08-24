@@ -6,7 +6,7 @@ import chaudiere from "../../assets/chaudiere.png"
 export default function Chaudiere() {
     
   return (
-    <div className="overflow-hidden bg-greyforbg py-16 sm:py-20">
+    <div className="overflow-hidden bg-greyforbg py-16 sm:py-20" id="chaudiere">
       <div className="mx-auto max-w-6xl px-6 lg:px-8 bg-white rounded-xl py-8">
         <div className="mx-auto grid w-full grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <Image

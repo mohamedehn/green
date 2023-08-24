@@ -10,9 +10,9 @@ import Link from 'next/link';
 const products = [
   { name: 'Borne de recharge', description: " Une offre clé en main, adaptée à chaque besoin.", href: '/borne', icon: BoltIcon },
   { name: 'Chauffage & Climatisation', description: 'Parcourez nos différentes solutions personnalisées.', href: '/pac', icon: Bars3Icon },
-  { name: 'Isolation', description: 'Limitez les déperditions énergétiques de votre logement.', href: '#', icon: HomeIcon },
-  { name: 'Panneaux photovoltaïques', description: "Grâce à l'auto-consommation,réduisez votre facture d'énergie", href: '#', icon: SunIcon },
-  { name: 'Rénovation électrique', description: 'Mettez aux normes votre logement pour + de sécurité et de confort.', href: '#', icon: ArrowPathIcon },
+  // { name: 'Isolation', description: 'Limitez les déperditions énergétiques de votre logement.', href: '#', icon: HomeIcon },
+  { name: 'Panneaux photovoltaïques', description: "Grâce à l'auto-consommation,réduisez votre facture d'énergie", href: '/pv', icon: SunIcon },
+  // { name: 'Rénovation électrique', description: 'Mettez aux normes votre logement pour + de sécurité et de confort.', href: '#', icon: ArrowPathIcon },
 ]
 
 // const callsToAction = [

@@ -7,9 +7,9 @@ const navigation = {
     solutions: [
       { name: 'Borne de recharge', href: '#' },
       { name: 'Chauffage & Climatisation', href: '#' },
-      { name: 'Isolation', href: '#' },
+      // { name: 'Isolation', href: '#' },
       { name: 'Panneaux photovoltaïques', href: '#' },
-      { name: "Rénovation énergétique", href: '#' },
+      // { name: "Rénovation énergétique", href: '#' },
     ],
     support: [
       { name: 'TVA à 5,5%', href: '#' },
