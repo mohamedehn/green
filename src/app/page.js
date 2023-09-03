@@ -9,12 +9,14 @@ import Informations from './components/informations';
 import Avis from './components/avis';
 import Footer from './components/footer';
 import './globals.css'
+import PopUpCookies from './components/popUpCookies';
 
 export default function Home() {
   return (
     <>
       <Header/>
       <Presentation/>
+      <PopUpCookies/>
       <Fonctionnement/>
       <Devis/>
       <Engagements/>
