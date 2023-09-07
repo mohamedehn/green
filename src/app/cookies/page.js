@@ -2,11 +2,13 @@
 import React from "react"
 import Header from "../components/header"
 import Footer from "../components/footer"
+import PopUpCookies from "../components/popUpCookies"
 
 export default function Cookies(){
     return(
         <div>
         <Header/>
+        <PopUpCookies/>
         <div className="bg-greyforbg py-20 sm:py-24">
             <div className="mx-auto max-w-6xl px-6 lg:px-8 bg-white rounded-xl py-16">
                 <div className="mx-auto lg:mx-0">

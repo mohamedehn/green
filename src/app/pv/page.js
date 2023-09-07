@@ -6,6 +6,7 @@ import Footer from "../components/footer"
 import Header from "../components/header"
 import Engagements from "../components/engagements"
 import Panneau from "../components/pv"
+import PopUpCookies from "../components/popUpCookies"
 
 export default function PV () {
     return(
@@ -24,6 +25,7 @@ export default function PV () {
                     </p>
                 </div>
             </div>
+            <PopUpCookies/>
             <Panneau/>
             <Fonctionnement/>
             <Engagements/>

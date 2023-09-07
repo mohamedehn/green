@@ -8,6 +8,7 @@ import Fonctionnement from "../components/fonctionnement";
 import Footer from "../components/footer";
 import HelpBorne from "../components/helpBorne";
 import Devis from "../components/devis";
+import PopUpCookies from "../components/popUpCookies";
 
 export default function Borne(){
 
@@ -25,6 +26,7 @@ export default function Borne(){
                 </div>
             </div>
             <Bornes/>
+            <PopUpCookies/>
             <Fonctionnement/>
             <HelpBorne/>
             <Devis/>

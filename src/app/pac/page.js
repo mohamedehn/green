@@ -13,6 +13,7 @@ import Chauffe from "../components/chauffe-eau";
 import Radiateur from "../components/radiateur";
 import PacWorks from "../components/PacWorks";
 import "../globals.css"
+import PopUpCookies from "../components/popUpCookies";
 
 
 export default function Pac(){
@@ -30,6 +31,7 @@ export default function Pac(){
                     </p>
                 </div>
             </div>
+            <PopUpCookies/>
             <PacWorks/>
             <PacEcs/>
             <Chaudiere/>

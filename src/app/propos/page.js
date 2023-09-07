@@ -7,6 +7,7 @@ import Header from '../components/header'
 import Image from 'next/image'
 import hire from "../../assets/hire.jpg"
 import pv2 from "../../assets/pv2.jpg"
+import PopUpCookies from '../components/popUpCookies'
 
 const stats = [
   { label: "Création de l'entreprise", value: '2022' },
@@ -73,7 +74,7 @@ export default function Propos() {
     <div className="bg-grayforbg">
       {/* Header */}
       <Header/>
-
+      <PopUpCookies/>
       <main className="max-w-6xl mx-auto">
         
 

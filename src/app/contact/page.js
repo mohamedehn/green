@@ -5,6 +5,7 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import Informations from "../components/informations"
 import Form from "../components/form"
+import PopUpCookies from "../components/popUpCookies"
 
 
 export default function Contact () {
@@ -23,6 +24,7 @@ export default function Contact () {
                     </p>
                 </div>
             </div>
+            <PopUpCookies/>
             <Informations/>
             <Form/>
             <Footer/>

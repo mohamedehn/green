@@ -2,11 +2,13 @@
 
 import Footer from "../components/footer";
 import Header from "../components/header";
+import PopUpCookies from "../components/popUpCookies";
 
 export default function Mentions(){
     return(
         <div>
         <Header/>
+        <PopUpCookies/>
         <div className="bg-greyforbg py-20 sm:py-24">
             <div className="mx-auto max-w-6xl px-6 lg:px-8 bg-white rounded-xl py-16">
                 <div className="mx-auto lg:mx-0">

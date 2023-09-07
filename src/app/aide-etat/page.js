@@ -6,6 +6,7 @@ import Footer from "../components/footer"
 import HelpEtat from "../components/helpEtat"
 import Devis from "../components/devis"
 import Fonctionnement from "../components/fonctionnement"
+import PopUpCookies from "../components/popUpCookies"
 
 export default function AideEtat () {
     return(
@@ -25,6 +26,7 @@ export default function AideEtat () {
                 </div>
             </div>
             <HelpEtat/>
+            <PopUpCookies/>
             <Fonctionnement/>
             <Devis/>
             <Footer/>
