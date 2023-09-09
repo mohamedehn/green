@@ -6,10 +6,10 @@ import Link from "next/link";
 
 const navigation = {
     solutions: [
-      { name: 'Borne de recharge', href: '#' },
-      { name: 'Chauffage & Climatisation', href: '#' },
+      { name: 'Borne de recharge', href: '/borne' },
+      { name: 'Chauffage & Climatisation', href: '/pac' },
       // { name: 'Isolation', href: '#' },
-      { name: 'Panneaux photovoltaïques', href: '#' },
+      { name: 'Panneaux photovoltaïques', href: '/pv' },
       // { name: "Rénovation énergétique", href: '#' },
     ],
     support: [
@@ -24,7 +24,6 @@ const navigation = {
       { name: 'A propos', href: '/propos' },
       { name: 'Blog', href: '/blog' },
       { name: 'Jobs', href: '/jobs' },
-      { name: 'Partenaires', href: '/partenaires' },
     ],
     legal: [
       { name: 'Cookies', href: '/cookies' },
@@ -93,9 +92,9 @@ const navigation = {
                   <ul role="list" className="mt-6 space-y-4">
                     {navigation.solutions.map((item) => (
                       <li key={item.name}>
-                        <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                        <Link href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                           {item.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>

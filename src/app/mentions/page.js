@@ -3,6 +3,7 @@
 import Footer from "../components/footer";
 import Header from "../components/header";
 import PopUpCookies from "../components/popUpCookies";
+import ScrollToTop from "../components/scrollToTop";
 
 export default function Mentions(){
     return(
@@ -37,6 +38,7 @@ export default function Mentions(){
                         Général pour la Protection des Données ou « RGPD », pour la collecte et le traitement des données à caractère personnel 
                         effectuées sur le site accessible à l’adresse URL : https://greenenergysolutions.fr/
                     </p>
+                    <ScrollToTop/>
                     <p className="mt-6 text-base leading-8 text-gray-600 text-justify">
                         L’entreprise Green Energy Solutions traite les données personnelles collectées via son site pour les finalités suivantes :
                     </p>

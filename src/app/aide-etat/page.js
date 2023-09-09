@@ -7,6 +7,7 @@ import HelpEtat from "../components/helpEtat"
 import Devis from "../components/devis"
 import Fonctionnement from "../components/fonctionnement"
 import PopUpCookies from "../components/popUpCookies"
+import ScrollToTop from "../components/scrollToTop"
 
 export default function AideEtat () {
     return(
@@ -25,6 +26,7 @@ export default function AideEtat () {
                     </p>
                 </div>
             </div>
+            <ScrollToTop/>
             <HelpEtat/>
             <PopUpCookies/>
             <Fonctionnement/>

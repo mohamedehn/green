@@ -7,6 +7,7 @@ import Header from "../components/header"
 import Engagements from "../components/engagements"
 import Panneau from "../components/pv"
 import PopUpCookies from "../components/popUpCookies"
+import ScrollToTop from "../components/scrollToTop"
 
 export default function PV () {
     return(
@@ -25,6 +26,7 @@ export default function PV () {
                     </p>
                 </div>
             </div>
+            <ScrollToTop/>
             <PopUpCookies/>
             <Panneau/>
             <Fonctionnement/>

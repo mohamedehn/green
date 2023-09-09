@@ -8,6 +8,7 @@ import Image from 'next/image'
 import hire from "../../assets/hire.jpg"
 import pv2 from "../../assets/pv2.jpg"
 import PopUpCookies from '../components/popUpCookies'
+import ScrollToTop from '../components/scrollToTop'
 
 const stats = [
   { label: "Création de l'entreprise", value: '2022' },
@@ -125,6 +126,7 @@ export default function Propos() {
                     environnementale et à l&apos;édification d&apos;un monde plus propre et plus prospère.
                 </p>
               </div>
+              <ScrollToTop/>
             </div>
             <dl className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mt-28 lg:grid-cols-4">
               {stats.map((stat, statIdx) => (

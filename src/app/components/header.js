@@ -46,6 +46,7 @@ export default function Header() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
+        
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Link href="/" className="text-base font-semibold leading-6 text-gray-900">
             Accueil
@@ -109,6 +110,7 @@ export default function Header() {
             A propos
           </Link>
         </Popover.Group>
+
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link href="/contact" className="text-base font-semibold leading-6 text-gray-900">
             Contact <span aria-hidden="true">&rarr;</span>

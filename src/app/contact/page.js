@@ -6,6 +6,7 @@ import Footer from "../components/footer"
 import Informations from "../components/informations"
 import Form from "../components/form"
 import PopUpCookies from "../components/popUpCookies"
+import ScrollToTop from "../components/scrollToTop"
 
 
 export default function Contact () {
@@ -24,6 +25,7 @@ export default function Contact () {
                     </p>
                 </div>
             </div>
+            <ScrollToTop/>
             <PopUpCookies/>
             <Informations/>
             <Form/>

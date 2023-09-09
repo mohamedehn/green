@@ -3,6 +3,7 @@ import React from "react"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import PopUpCookies from "../components/popUpCookies"
+import ScrollToTop from "../components/scrollToTop"
 
 export default function Cookies(){
     return(
@@ -31,6 +32,7 @@ export default function Cookies(){
                         quatre catégories : les cookies essentiels, les cookies de mesures d’audience et de statistique, les cookies fonctionnels 
                         et les cookies publicitaires.
                     </p>
+                    <ScrollToTop/>
                     <h3 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl pt-10">QUELLE EST LA DUREE DE CONSERVATION D’UN COOKIE ?</h3>
                     <p className="mt-6 text-base leading-8 text-gray-600 text-justify">
                         Les cookies déposés par Green Energy Solutions, nos sous-traitants et nos partenaires et les données de navigations 

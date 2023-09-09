@@ -9,6 +9,7 @@ import Footer from "../components/footer";
 import HelpBorne from "../components/helpBorne";
 import Devis from "../components/devis";
 import PopUpCookies from "../components/popUpCookies";
+import ScrollToTop from "../components/scrollToTop";
 
 export default function Borne(){
 
@@ -25,6 +26,7 @@ export default function Borne(){
                     </p>
                 </div>
             </div>
+            <ScrollToTop/>
             <Bornes/>
             <PopUpCookies/>
             <Fonctionnement/>

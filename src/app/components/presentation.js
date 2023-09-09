@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import panneau from "../../assets/panneau.jpg"
+import panneau from "../../assets/panneau.jpg";
+import Link from 'next/link';
 
 
 export default function Presentation() {
@@ -12,17 +13,17 @@ export default function Presentation() {
             <div className="lg:max-w-lg">
                 <h2 className="text-3xl font-semibold leading-7 text-green-700 text-center">Green Energy Solutions</h2>
                 <p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl pt-4">
-                Avec GES, la rénovation énergétique c&apos;est simple !
+                  Avec GES, la rénovation énergétique c&apos;est simple !
                 </p>
                 <p className="mt-6 text-lg leading-8 text-gray-600 text-justify">
-                    Basée en région Rhône-Alpes Auvergne, Green Energy Solutions est une société de conseils, d&apos;études et de 
-                    travaux en matière d&apos;économie énergétique destinée aux particuliers et aux professionnelles. Soucieux des problématiques 
-                    liées à l&apos;environnement, nous avons pour ambition de promouvoir les énergies renouvelables et permettre à tout un chacun 
-                    de les adopter et de faire baisser de manière significative les consommations d&apos;énergies.
+                  Basée en région Auvergne-Rhône-Alpes, Green Energy Solutions est une société de conseils, d&apos;études et de travaux en 
+                  matière d&apos;économie énergétique destinée aux particuliers et aux professionnels. Soucieux des problématiques liées à 
+                  l&apos;environnement, nous avons pour ambition de promouvoir les énergies renouvelables et de permettre à chacun de les 
+                  adopter, contribuant ainsi à réduire de manière significative la consommation d&apos;énergie.
                 </p>
                 <div className='mt-6 text-lg leading-8 text-gray-600 text-justify flex justify-around font-semibold hover:text-green-800'>
-                    <a href='#'>En savoir +</a>
-                    <a href='#'>Nous contacter</a>
+                    <Link href='/propos'>En savoir +</Link>
+                    <Link href='/contact'>Nous contacter</Link>
                 </div>
             </div>
           </div>
