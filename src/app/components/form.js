@@ -1,6 +1,8 @@
 
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -8,6 +10,10 @@ function classNames(...classes) {
 
 export default function Form() {
   const [agreed, setAgreed] = useState(false)
+
+  const { ref, inView } = useInView({
+      threshold: 0.15,
+  });
 
    // les variable ci-dessous permettent de récupérer les cookies et ainsi vérifier si ils sont accepté ou non
   // on interviendra ensuite sur le bouton envoyer afin de le rendre inactif si les cookies ont été rejetées ou en attente de choix
@@ -34,8 +40,8 @@ export default function Form() {
   };
 
   return (
-    <div className="bg-white px-6 py-16 sm:py-20 lg:px-8 max-w-6xl mx-auto rounded-xl mb-20">
-      <div
+    <div className={`bg-white px-6 py-16 sm:py-20 lg:px-8 max-w-6xl mx-auto rounded-xl mb-20 ${inView ? 'animate-fade-in' : 'opacity-0'} transition-opacity`} ref={ref}>
+      {/* <div
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
         aria-hidden="true"
       >
@@ -46,7 +52,7 @@ export default function Form() {
               'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
           }}
         />
-      </div>
+      </div> */}
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-green-700 sm:text-4xl">Formulaire de contact</h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">

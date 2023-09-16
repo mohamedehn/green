@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import ges from "../../assets/ges.png"
 import Link from "next/link";
-
+import { useInView } from 'react-intersection-observer';
 
 const navigation = {
     solutions: [
@@ -60,8 +60,13 @@ const navigation = {
   }
   
   export default function Footer() {
+
+    const { ref, inView } = useInView({
+        threshold: 0.4,
+    });
+
     return (
-      <footer className="bg-white" aria-labelledby="footer-heading">
+      <footer className={`bg-white ${inView ? 'animate-fade-in' : 'opacity-0'} transition-opacity`} ref={ref} aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>

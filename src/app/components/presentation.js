@@ -2,11 +2,18 @@ import React from 'react';
 import Image from 'next/image';
 import panneau from "../../assets/panneau.jpg";
 import Link from 'next/link';
+import { useInView } from 'react-intersection-observer';
+
 
 
 export default function Presentation() {
+
+    const { ref, inView } = useInView({
+      threshold: 0.4,
+  });
+
   return (
-    <div className="overflow-hidden bg-white mt-10 rounded-xl max-w-6xl flex mx-auto">
+    <div className={`overflow-hidden bg-white mt-10 rounded-xl max-w-6xl flex mx-auto ${inView ? 'animate-fade-in' : 'opacity-0'} transition-opacity`} ref={ref}>
       <div className="mx-auto max-w-7xl px-6 lg:pr-8 lg:px-0">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:ml-auto lg:pl-4 lg:pt-4">

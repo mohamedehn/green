@@ -1,5 +1,7 @@
 import React from 'react';
 import { HomeIcon, EnvelopeIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/20/solid';
+import { useInView } from 'react-intersection-observer';
+
 
 const features = [
   {
@@ -19,8 +21,13 @@ const features = [
 ]
 
 export default function Informations() {
+
+  const { ref, inView } = useInView({
+      threshold: 0.4,
+  });
+
   return (
-    <div className="bg-greyforbg py-24 max-w-6xl mx-auto flex">
+    <div className={`bg-greyforbg py-20 max-w-6xl mx-auto flex ${inView ? 'animate-fade-in' : 'opacity-0'} transition-opacity`} ref={ref}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-4xl font-semibold leading-7 text-green-700">Comment nous contacter ?</h2>

@@ -1,14 +1,16 @@
 'use client'
 
-import { useState } from 'react'
-import {AcademicCapIcon, CheckCircleIcon, HandRaisedIcon, RocketLaunchIcon, SparklesIcon, SunIcon, UserGroupIcon} from '@heroicons/react/20/solid'
-import Footer from '../components/footer'
-import Header from '../components/header'
-import Image from 'next/image'
-import hire from "../../assets/hire.jpg"
-import pv2 from "../../assets/pv2.jpg"
-import PopUpCookies from '../components/popUpCookies'
-import ScrollToTop from '../components/scrollToTop'
+import { useState } from 'react';
+import {AcademicCapIcon, CheckCircleIcon, HandRaisedIcon, RocketLaunchIcon, SparklesIcon, SunIcon, UserGroupIcon} from '@heroicons/react/20/solid';
+import Footer from '../components/footer';
+import Header from '../components/header';
+import Image from 'next/image';
+import hire from "../../assets/hire.jpg";
+import pv2 from "../../assets/pv2.jpg";
+import PopUpCookies from '../components/popUpCookies';
+import ScrollToTop from '../components/scrollToTop';
+import { useInView } from 'react-intersection-observer';
+
 
 const stats = [
   { label: "Création de l'entreprise", value: '2022' },
@@ -69,10 +71,14 @@ const benefits = [
 
 
 export default function Propos() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const { ref, inView } = useInView({
+      threshold: 0.1,
+  });
 
   return (
-    <div className="bg-grayforbg">
+    <div className={`bg-grayforbg ${inView ? 'animate-fade-in' : 'opacity-0'} transition-opacity`} ref={ref}>
       {/* Header */}
       <Header/>
       <PopUpCookies/>

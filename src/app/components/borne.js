@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import borne from "../../assets/borne.jpg"
+import borne from "../../assets/borne.jpg";
+import { useInView } from 'react-intersection-observer';
+
 
 import { UserPlusIcon, ShieldCheckIcon, BoltIcon } from '@heroicons/react/20/solid'
 
@@ -24,8 +26,13 @@ const features = [
 ]
 
 export default function Bornes() {
+
+  const { ref, inView } = useInView({
+      threshold: 0.25,
+  });
+
   return (
-    <div className="overflow-hidden bg-greyforbg py-16 sm:py-20">
+    <div className={`overflow-hidden bg-greyforbg py-16 ${inView ? 'animate-fade-in' : 'opacity-0'} transition-opacity`} ref={ref}>
       <div className="mx-auto max-w-6xl px-6 lg:px-8 bg-white rounded-xl py-8">
         <div className="mx-auto grid w-full grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pr-8">

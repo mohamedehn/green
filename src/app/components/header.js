@@ -4,8 +4,10 @@ import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react';
 import {ArrowPathIcon, Bars3Icon, BoltIcon, CursorArrowRaysIcon, HomeIcon, SunIcon, XMarkIcon} from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
-import ges from "../../assets/ges.png"
+import ges from "../../assets/ges.png";
 import Link from 'next/link';
+import { useInView } from 'react-intersection-observer';
+
 
 const products = [
   { name: 'Borne de recharge', description: " Une offre clé en main, adaptée à chaque besoin.", href: '/borne', icon: BoltIcon },
@@ -25,10 +27,15 @@ function classNames(...classes) {
 }
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const { ref, inView } = useInView({
+      threshold: 0.4,
+  });
 
   return (
-    <header className="bg-white border-b border-[#cfcfcf]">
+    <header className={`bg-white border-b border-[#cfcfcf] ${inView ? 'animate-fade-in' : 'opacity-0'} transition-opacity`} ref={ref}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">

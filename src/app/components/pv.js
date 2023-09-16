@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import pv from "../../assets/pv.jpg"
+import pv from "../../assets/pv.jpg";
+import { useInView } from 'react-intersection-observer';
+
 
 import { UserPlusIcon, ShieldCheckIcon, BoltIcon } from '@heroicons/react/20/solid'
 
@@ -39,8 +41,13 @@ const secondFeatures = [
 ]
 
 export default function Panneau() {
+
+  const { ref, inView } = useInView({
+      threshold: 0.25,
+  });
+
   return (
-    <div className="overflow-hidden bg-greyforbg py-16 sm:py-20">
+    <div className={`overflow-hidden bg-greyforbg py-16 sm:py-16 ${inView ? 'animate-fade-in' : 'opacity-0'} transition-opacity`} ref={ref}>
       <div className="mx-auto max-w-6xl px-6 lg:px-8 bg-white rounded-xl py-8">
         <div className="mx-auto grid w-full grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pr-8">
@@ -67,7 +74,7 @@ export default function Panneau() {
           />
         </div>
       </div>
-      <div className="bg-greyforbg pt-24 sm:pt-32">
+      <div className="bg-greyforbg pt-24 sm:pt-48">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="mx-auto max-w-6xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-green-700 sm:text-4xl text-center">Installer des panneaux solaires avec GES</h2>

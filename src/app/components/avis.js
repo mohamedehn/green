@@ -1,5 +1,5 @@
-import React from "react"
-import GoogleReviews from "./google"
+import React from "react";
+import GoogleReviews from "./google";
 
 // const testimonials = [
 //     {

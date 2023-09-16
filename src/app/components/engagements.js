@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import { useInView } from 'react-intersection-observer';
 
 const stats = [
     {   id: 1, 
@@ -16,8 +17,13 @@ const stats = [
   ]
   
   export default function Engagements() {
+
+      const { ref, inView } = useInView({
+        threshold: 0.4,
+    });
+
     return (
-      <div className="bg-greyforbg py-24 max-w-6xl flex mx-auto rounded-xl">
+      <div className={`bg-greyforbg py-20 max-w-6xl flex mx-auto rounded-xl ${inView ? 'animate-fade-in' : 'opacity-0'} transition-opacity`} ref={ref}>
         <div className="mx-auto bg-white rounded-xl w-full">
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="text-center">

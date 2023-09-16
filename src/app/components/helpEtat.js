@@ -1,4 +1,5 @@
 import React from "react";
+import { useInView } from 'react-intersection-observer';
 
 
 const features = [
@@ -41,8 +42,13 @@ const features = [
 ]
 
 export default function HelpEtat() {
+
+  const { ref, inView } = useInView({
+      threshold: 0.4,
+  });
+
   return (
-    <div className="bg-greyforbg py-24 sm:py-32">
+    <div className={`bg-greyforbg py-24 sm:py-32 ${inView ? 'animate-fade-in' : 'opacity-0'} transition-opacity`} ref={ref}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-6xl lg:text-center">
           <p className="mt-2 text-3xl font-bold tracking-tight text-green-700 sm:text-4xl">

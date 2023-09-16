@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { EnvelopeIcon} from '@heroicons/react/20/solid';
 import computer from "../../assets/computer.jpg";
 import Link from 'next/link';
+import { useInView } from 'react-intersection-observer';
+
 
 const features = [
   {
@@ -13,8 +15,13 @@ const features = [
 ]
 
 export default function Devis() {
+
+    const { ref, inView } = useInView({
+      threshold: 0.4,
+  });
+
   return (
-    <div className="overflow-hidden bg-greyforbg py-24 sm:py-16 max-w-6xl flex mx-auto rounded-xl">
+    <div className={`overflow-hidden bg-greyforbg py-20 sm:py-12 max-w-6xl flex mx-auto rounded-xl ${inView ? 'animate-fade-in' : 'opacity-0'} transition-opacity`} ref={ref}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8 rounded-xl bg-white">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:ml-auto lg:pl-4 lg:pt-4">
