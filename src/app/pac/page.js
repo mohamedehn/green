@@ -15,6 +15,7 @@ import PacWorks from "../components/PacWorks";
 import "../globals.css";
 import PopUpCookies from "../components/popUpCookies";
 import { useInView } from 'react-intersection-observer';
+import ScrollToTop from "../components/scrollToTop";
 
 
 
@@ -38,6 +39,7 @@ export default function Pac(){
                 </div>
             </div>
             <PopUpCookies/>
+            <ScrollToTop/>
             <PacWorks/>
             <PacEcs/>
             <Chaudiere/>

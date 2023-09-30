@@ -1,8 +1,8 @@
 
 import { Fragment, useState } from 'react';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react';
-import {ArrowPathIcon, Bars3Icon, BoltIcon, CursorArrowRaysIcon, HomeIcon, SunIcon, XMarkIcon} from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
+import { Bars3Icon, BoltIcon, SunIcon, XMarkIcon} from '@heroicons/react/24/outline'
+import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
 import ges from "../../assets/ges.png";
 import Link from 'next/link';
@@ -148,12 +148,12 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Accueil
-                </a>
+                </Link>
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
@@ -179,26 +179,26 @@ export default function Header() {
                     </>
                   )}
                 </Disclosure>
-                <a
-                  href="#"
+                <Link
+                  href="/aide-etat"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Aides de l&apos;état
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href="/propos"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   A propos
-                </a>
+                </Link>
               </div>
               <div className="py-6">
-                <a
-                  href="#"
+                <Link
+                  href="/contact"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contact
-                </a>
+                </Link>
               </div>
             </div>
           </div>

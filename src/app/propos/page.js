@@ -10,6 +10,7 @@ import pv2 from "../../assets/pv2.jpg";
 import PopUpCookies from '../components/popUpCookies';
 import ScrollToTop from '../components/scrollToTop';
 import { useInView } from 'react-intersection-observer';
+import Link from 'next/link';
 
 
 const stats = [
@@ -201,7 +202,7 @@ export default function Propos() {
         </div> */}
 
         {/* CTA section */}
-        <div className="relative isolate -z-10 mt-32 sm:mt-40">
+        <div className="relative z-10 mt-32 sm:mt-40">
           <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="mx-auto flex max-w-2xl flex-col gap-16 bg-white/5 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
               <Image
@@ -227,9 +228,9 @@ export default function Propos() {
                   ))}
                 </ul>
                 <div className="mt-10 flex">
-                  <a href="#" className="text-sm font-semibold leading-6 text-green-800">
+                  <Link href="/jobs" className="text-sm font-semibold leading-6 text-green-800">
                     Consultez nos offres d&apos;emplois <span aria-hidden="true">&rarr;</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

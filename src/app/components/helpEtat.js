@@ -44,7 +44,7 @@ const features = [
 export default function HelpEtat() {
 
   const { ref, inView } = useInView({
-      threshold: 0.4,
+      threshold: 0.1,
   });
 
   return (
