@@ -75,7 +75,7 @@ export default function Propos() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const { ref, inView } = useInView({
-      threshold: 0.1,
+      threshold: 0.01,
   });
 
   return (

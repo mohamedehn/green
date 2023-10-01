@@ -73,14 +73,16 @@ const navigation = {
         <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-20">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-8 block justify-center">
-              <Image
-                className="w-[30%] xl:w-[50%] justify-center flex mx-auto"
-                src={ges}
-                alt="Company name"
-              />
-              <p className="text-sm leading-6 text-gray-600 justify-center flex">
-                Making the world a better place.
-              </p>
+              <Link href="/">
+                <Image
+                  className="w-[30%] xl:w-[50%] justify-center flex mx-auto"
+                  src={ges}
+                  alt="Company name"
+                />
+                <p className="text-sm leading-6 text-gray-600 justify-center flex">
+                  Making the world a better place.
+                </p>
+              </Link>
               <div className="flex space-x-6 justify-center">
                 {navigation.social.map((item) => (
                   <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
